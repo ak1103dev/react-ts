@@ -2,9 +2,9 @@ import React from 'react'
 import { renderRoutes, RouteConfig } from 'react-router-config'
 import { BrowserRouter } from 'react-router-dom'
 
-import Root from '../layouts/Root'
-import Home from '../pages/Home'
-import Login from '../pages/Login'
+import Root from 'layouts/Root'
+import Home from 'pages/Home'
+import Login from 'pages/Login'
 
 type Props = { route: RouteConfig, someProp: string }
 

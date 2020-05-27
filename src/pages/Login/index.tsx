@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '../../components/Button'
-import FormInput from '../../components/Form/Input'
+import Button from 'components/Button'
+import FormInput from 'components/Form/Input'
 
 const Home = () => {
   return (
