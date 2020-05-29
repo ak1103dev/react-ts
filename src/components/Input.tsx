@@ -6,9 +6,7 @@ type Props = {
 }
 
 const Input = (props: Props) => {
-  return (
-    <input {...props} className="border border-gray-400 rounded" />
-  )
+  return <input {...props} className="border border-gray-400 rounded" />
 }
 
 export default Input
