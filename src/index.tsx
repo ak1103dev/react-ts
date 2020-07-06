@@ -5,6 +5,12 @@ import 'styles/main.css'
 import App from 'App'
 import * as serviceWorker from 'serviceWorker'
 
+declare global {
+  interface Window {
+    Trello: any
+  }
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

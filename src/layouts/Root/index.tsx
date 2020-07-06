@@ -1,5 +1,7 @@
 import React from 'react'
 import { renderRoutes, RouteConfig } from 'react-router-config'
+import Layout from 'components/Layout'
+import Header from 'components/Layout/Header'
 
 type Props = {
   route: RouteConfig
@@ -7,10 +9,10 @@ type Props = {
 }
 
 const Root = ({ route }: Props) => (
-  <div>
-    <h1>Root</h1>
+  <Layout>
+    <Header />
     {renderRoutes(route.routes)}
-  </div>
+  </Layout>
 )
 
 export default Root
