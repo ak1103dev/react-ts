@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { renderRoutes, RouteConfig } from 'react-router-config'
-import { BrowserRouter } from 'react-router-dom'
-
+import { BrowserRouter as Router } from 'react-router-dom'
 import Root from 'layouts/Root'
-import Home from 'pages/Home'
-import Login from 'pages/Login'
+import ErrorBoundary from 'components/ErrorBoundary'
+
+const Home = lazy(() => import('pages/Home'))
+const Login = lazy(() => import('pages/Login'))
 
 type Props = {
   route: RouteConfig
@@ -54,7 +55,15 @@ const routes: any = [
 ]
 
 const Routes = () => {
-  return <BrowserRouter>{renderRoutes(routes)}</BrowserRouter>
+  return (
+    <Router>
+      <ErrorBoundary>
+        <Suspense fallback={<div>Loading...</div>}>
+          {renderRoutes(routes)}
+        </Suspense>
+      </ErrorBoundary>
+    </Router>
+  )
 }
 
 export default Routes
