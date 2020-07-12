@@ -1,10 +1,13 @@
 import React from 'react'
 import Routes from 'routes'
+import { AuthProvider } from 'components/AuthProvider'
 
 function App() {
   return (
     <div>
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </div>
   )
 }
