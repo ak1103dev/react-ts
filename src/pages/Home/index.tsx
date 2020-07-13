@@ -1,12 +1,17 @@
 import React from 'react'
-import { RouteConfig } from 'react-router-config'
+import { useAuth, AuthType } from 'components/AuthProvider'
 
-type Props = { route: RouteConfig, someProp: string }
+const Home = () => {
+  const { user }: AuthType = useAuth()
 
-const Home = ({ route }: Props) => (
-  <div>
-    <h2>Home</h2>
-  </div>
-)
+  return (
+    <div>
+      <h2>Home</h2>
+      <div>
+        {user.id} {user.name}
+      </div>
+    </div>
+  )
+}
 
 export default Home

@@ -1,15 +1,11 @@
 import React from 'react'
 
 type Props = {
-  children: React.ReactChildren,
+  children: React.ReactChildren
 }
 
-const Text = ({
-  children,
-}: Props) => {
-  return (
-    <span>{children}</span>
-  )
+const Text = ({ children }: Props) => {
+  return <span>{children}</span>
 }
 
 export default Text
